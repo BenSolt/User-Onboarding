@@ -13,7 +13,7 @@ const NewUserForm = ({ errors, touched, values, status }) => {
     }, [status]);
  
     return (
-        <div className="animal-form">
+        <div className="User-form">
           <h1>User Form</h1>
           <Form>
             <Field type="text" name="userName" placeholder="Enter Name" />
@@ -62,7 +62,7 @@ const NewUserForm = ({ errors, touched, values, status }) => {
             <button type="submit">Submit!</button>
           </Form>
     
-          {animals.map(user => (
+          {users.map(user => (
             <ul key={user.id}>
               <li>Name: {user.name}</li>
               <li>Email: {user.email}</li>
@@ -86,9 +86,9 @@ const FormikUserForm = withFormik({
     },
   
     validationSchema: Yup.object().shape({
-      name: Yup.string().required("You silly!!!"),
-      email: Yup.string().required(),
-      password: Yup.string()
+      name: Yup.string().required("Add a name!"),
+      email: Yup.string().required("Email is Required"),
+      password: Yup.string().required(),
 
     }),
   
