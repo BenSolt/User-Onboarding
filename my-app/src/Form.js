@@ -38,10 +38,26 @@ const NewUserForm = ({ errors, touched, values, status }) => {
               <span className="checkmark" />
             </label>
 
+            <Field type="text" name="info" placeholder="Enter Info" className="userPw" />
+            {touched.password && errors.password && <p className="error">{errors.password}</p>}
 
 
-            
-    
+            <Field component="select" className="rank" name="rank">
+          <option>Please Choose an Option</option>
+          <option value="noob">Noob</option>
+          <option value="semi-Pro">Semi-Pro</option>
+          <option value="pro">Pro</option>
+            </Field>
+
+            <Field
+          component="textarea"
+          type="text"
+          name="notes"
+          placeholder="Notes"
+        />
+
+
+
             <button type="submit">Submit!</button>
           </Form>
     
