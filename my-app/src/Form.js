@@ -47,7 +47,7 @@ const NewUserForm = ({ errors, touched, values, status }) => {
     
           {users.map(user => (
             <ul key={user.id}>
-              <li>Name: {user.name}</li>
+              <li>Name: {user.userName}</li>
               <li>Email: {user.email}</li>
               <li>Password: {user.password}</li>
             </ul>
@@ -69,9 +69,9 @@ const FormikUserForm = withFormik({
     },
   
     validationSchema: Yup.object().shape({
-      userName: Yup.string().required("Add a name"),
+      userName: Yup.string().required("Enter a name, smartypants!"),
       email: Yup.string().required("Add an email"),
-      password: Yup.string().required(),
+      password: Yup.string().required("Require Password!"),
 
     }),
   
@@ -79,8 +79,10 @@ const FormikUserForm = withFormik({
       axios
         // values is our object with all our data on it.
         .post("https://reqres.in/api/users/", values)
-        .then(res => {
+        .then(res =>  {
           setStatus(res.data);
+          
+          
         })
         .catch(err => console.log(err.response));
     }
