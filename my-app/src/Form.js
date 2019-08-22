@@ -21,10 +21,10 @@ const NewUserForm = ({ errors, touched, values, status }) => {
               <p className="error">{errors.userName}</p>
             )}
     
-            <Field type="text" name="Email" placeholder="Enter Email" />
+            <Field type="text" name="email" placeholder="Enter Email" />
             {touched.email && errors.email && <p className="error">{errors.email}</p>}
 
-            <Field type="text" name="Password" placeholder="Enter Password" />
+            <Field type="text" name="password" placeholder="Enter Password" />
             {touched.password && errors.password && <p className="error">{errors.password}</p>}
             
     
@@ -75,19 +75,19 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 
 const FormikUserForm = withFormik({
     // object destructuring. We could do values.species but we are destructuring it so we can just put species. You see the same thing in Props a lot so in stead of props.values you would see {values}
-    mapPropsToValues({ name, email, password, termsofService }) {
+    mapPropsToValues({ userName, email, password, termsofService }) {
       return {
           
         termsofService: termsofService || false,
-        name: name || "",
+        userName: userName || "",
         email: email || "",
         password: password || ""
       };
     },
   
     validationSchema: Yup.object().shape({
-      name: Yup.string().required("Add a name!"),
-      email: Yup.string().required("Email is Required"),
+      userName: Yup.string().required("Add a name"),
+      email: Yup.string().required("Add an email"),
       password: Yup.string().required(),
 
     }),
