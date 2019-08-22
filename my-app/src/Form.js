@@ -28,6 +28,18 @@ const NewUserForm = ({ errors, touched, values, status }) => {
             {touched.password && errors.password && <p className="error">{errors.password}</p>}
             
     
+            <label className="checkbox-container">
+              Terms of Service
+              <Field
+                type="checkbox"
+                name="termsofService"
+                checked={values.termsofService}
+              />
+              <span className="checkmark" />
+            </label>
+
+
+
             {/* <Field component="select" className="food-select" name="food">
               <option>Please Choose an Option</option>
               <option value="herbivore">Herbivore</option>
@@ -35,17 +47,9 @@ const NewUserForm = ({ errors, touched, values, status }) => {
               <option value="omnivore">Omnivore</option>
             </Field> */}
     
-            <label className="checkbox-container">
-              Terms of Service
-              <Field
-                type="checkbox"
-                name="vaccinations"
-                checked={values.vaccinations}
-              />
-              <span className="checkmark" />
-            </label>
+           
     
-            <Field
+            {/* <Field
               component="textarea"
               type="text"
               name="notes"
@@ -53,7 +57,7 @@ const NewUserForm = ({ errors, touched, values, status }) => {
             />
             {touched.notes && errors.notes && (
               <p className="error">{errors.notes}</p>
-            )}
+            )} */}
     
             <button type="submit">Submit!</button>
           </Form>
@@ -71,10 +75,10 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 
 const FormikUserForm = withFormik({
     // object destructuring. We could do values.species but we are destructuring it so we can just put species. You see the same thing in Props a lot so in stead of props.values you would see {values}
-    mapPropsToValues({ name, email, password, vaccinations }) {
+    mapPropsToValues({ name, email, password, termsofService }) {
       return {
           
-        vaccinations: vaccinations || false,
+        termsofService: termsofService || false,
         name: name || "",
         email: email || "",
         password: password || ""
@@ -97,6 +101,6 @@ const FormikUserForm = withFormik({
         })
         .catch(err => console.log(err.response));
     }
-  })(AnimalForm); // currying functions in Javascript
-  // console.log("This is the HOC", FormikAnimalForm)
+  })(NewUserForm);
+
   export default FormikUserForm;
