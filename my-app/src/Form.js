@@ -38,23 +38,25 @@ const NewUserForm = ({ errors, touched, values, status }) => {
               <span className="checkmark" />
             </label>
 
-            <Field type="text" name="info" placeholder="Enter Info" className="userPw" />
-            {touched.password && errors.password && <p className="error">{errors.password}</p>}
+            <Field type="text" name="age" placeholder="Enter Age" className="age" />
+            {touched.age && errors.age && <p className="error">{errors.age}</p>}
+             
 
 
             <Field component="select" className="rank" name="rank">
-          <option>Please Choose an Option</option>
+          <option>Please Choose your skill rank</option>
           <option value="noob">Noob</option>
           <option value="semi-Pro">Semi-Pro</option>
           <option value="pro">Pro</option>
             </Field>
 
-            <Field
+            <Field className="note"
           component="textarea"
           type="text"
-          name="notes"
-          placeholder="Notes"
-        />
+          name="note"
+          placeholder="Notes"/>
+          
+            
 
 
 
@@ -66,6 +68,9 @@ const NewUserForm = ({ errors, touched, values, status }) => {
               <li>Name: {user.userName}</li>
               <li>Email: {user.email}</li>
               <li>Password: {user.password}</li>
+              <li>Age: {user.age}</li>
+              <li>Gamer Skill: {user.rank}</li>
+              <li>Notes: {user.note}</li>
             </ul>
           ))}
         </div>
@@ -73,14 +78,18 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 };
 
 const FormikUserForm = withFormik({
-    // object destructuring. We could do values.species but we are destructuring it so we can just put species. You see the same thing in Props a lot so in stead of props.values you would see {values}
-    mapPropsToValues({ userName, email, password, termsofService }) {
+   
+    mapPropsToValues({ userName, email, password, termsofService, info, rank, age}) {
       return {
           
         termsofService: termsofService || false,
         userName: userName || "",
         email: email || "",
-        password: password || ""
+        password: password || "",
+        info: info || "",
+        rank: rank || "",
+        age: age || "",
+
       };
     },
   
@@ -88,7 +97,9 @@ const FormikUserForm = withFormik({
       userName: Yup.string().required("Enter a name, smartypants!"),
       email: Yup.string().required("Add an email"),
       password: Yup.string().required("Require Password!"),
-
+      age: Yup.string().required("Tell me your age!"),
+      
+      
     }),
   
     handleSubmit(values, { setStatus }) {

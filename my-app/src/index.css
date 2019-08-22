@@ -13,8 +13,8 @@ code {
 }
 
 .User-form{
-  width: 460px;
-  margin: auto 100px;
+  width: 260px;
+  margin: auto 200px;
   padding: 32px;
   font-weight: bold;
   background-color: gray;
@@ -36,6 +36,22 @@ code {
   margin-top: 32px;
 } 
 
+
+.age{
+  display: block;
+  margin-top: 32px;
+}
+.rank{
+  display: block;
+  margin-top: 32px;
+}
+
+.note{
+  display: block;
+  margin-top: 32px;
+}
+
+
 .error {
   margin: 0;
   position: absolute;
@@ -43,10 +59,11 @@ code {
 }
 
 .checkbox-container{
-  
+  display: flex;
   margin-top: 32px;
 }
 
 button{
-margin: 32px
+  display: flex;
+  margin: 32px
 }
