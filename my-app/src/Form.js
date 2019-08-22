@@ -16,15 +16,15 @@ const NewUserForm = ({ errors, touched, values, status }) => {
         <div className="User-form">
           <h1>User Form</h1>
           <Form>
-            <Field type="text" name="userName" placeholder="Enter Name" />
+            <Field type="text" name="userName" placeholder="Enter Name" className="user"/>
             {touched.userName && errors.userName && (
               <p className="error">{errors.userName}</p>
             )}
     
-            <Field type="text" name="email" placeholder="Enter Email" />
+            <Field type="text" name="email" placeholder="Enter Email" className="userEmail"/>
             {touched.email && errors.email && <p className="error">{errors.email}</p>}
 
-            <Field type="text" name="password" placeholder="Enter Password" />
+            <Field type="text" name="password" placeholder="Enter Password" className="userPw" />
             {touched.password && errors.password && <p className="error">{errors.password}</p>}
             
     
@@ -40,24 +40,7 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 
 
 
-            {/* <Field component="select" className="food-select" name="food">
-              <option>Please Choose an Option</option>
-              <option value="herbivore">Herbivore</option>
-              <option value="carnivore">Carnivore</option>
-              <option value="omnivore">Omnivore</option>
-            </Field> */}
-    
-           
-    
-            {/* <Field
-              component="textarea"
-              type="text"
-              name="notes"
-              placeholder="Notes"
-            />
-            {touched.notes && errors.notes && (
-              <p className="error">{errors.notes}</p>
-            )} */}
+            
     
             <button type="submit">Submit!</button>
           </Form>

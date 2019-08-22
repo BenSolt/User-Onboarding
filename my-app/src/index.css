@@ -13,5 +13,40 @@ code {
 }
 
 .User-form{
-  background: gray;
+  width: 460px;
+  margin: auto 100px;
+  padding: 32px;
+  font-weight: bold;
+  background-color: gray;
+  
+}
+
+.user{
+  display: block;
+  margin-top: 32px;
+}
+
+ .userEmail{
+  display: block;
+  margin-top: 32px;
+}
+
+.userPw{
+  display: block;
+  margin-top: 32px;
+} 
+
+.error {
+  margin: 0;
+  position: absolute;
+  
+}
+
+.checkbox-container{
+  
+  margin-top: 32px;
+}
+
+button{
+margin: 32px
 }
