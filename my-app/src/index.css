@@ -18,6 +18,7 @@ code {
   padding: 32px;
   font-weight: bold;
   background-color: gray;
+  border: 2px solid black;
   
 }
 
@@ -66,4 +67,11 @@ code {
 button{
   display: flex;
   margin: 32px
+}
+
+.notemade{
+  background: lightblue;
+  border: 2px solid black;
+  margin-top: 10px;
+  
 }

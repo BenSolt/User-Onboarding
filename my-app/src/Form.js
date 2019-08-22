@@ -62,17 +62,24 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 
             <button type="submit">Submit!</button>
           </Form>
+
     
-          {users.map(user => (
-            <ul key={user.id}>
-              <li>Name: {user.userName}</li>
-              <li>Email: {user.email}</li>
-              <li>Password: {user.password}</li>
-              <li>Age: {user.age}</li>
-              <li>Gamer Skill: {user.rank}</li>
-              <li>Notes: {user.note}</li>
-            </ul>
-          ))}
+
+{users.map(user => (
+<div className="notemade">
+    <ul key={user.id}>
+      <li>Name: {user.userName}</li>
+      <li>Email: {user.email}</li>
+      <li>Password: {user.password}</li>
+      <li>Age: {user.age}</li>
+      <li>Gamer Skill: {user.rank}</li>
+      <li>Notes: {user.note}</li>
+    </ul>
+    </div>
+  ))}
+
+    
+          
         </div>
       );
 };
