@@ -13,17 +13,29 @@ code {
 }
 
 .User-form{
-  width: 260px;
+  
+  display: flex;
+  flex-wrap: wrap; 
+
+  width: 400px;
   margin: auto 200px;
   padding: 32px;
   font-weight: bold;
   background-color: gray;
   border: 2px solid black;
-
-   /* display: flex;
-    flex-wrap: wrap; */
   
 }
+
+.formholder{
+  display: flex;
+  
+  border: 2px solid black;
+}
+.formpart1{
+  
+  border: 2px solid black;
+}
+
 
 .user{
   display: block;

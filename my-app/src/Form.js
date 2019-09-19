@@ -14,8 +14,13 @@ const NewUserForm = ({ errors, touched, values, status }) => {
  
     return (
         <div className="User-form">
+
+
           <h1>User Form</h1>
           <Form>
+<div className="formholder">
+
+<div className="formpart1">
             <Field type="text" name="userName" placeholder="Enter Name" className="user"/>
             {touched.userName && errors.userName && (
               <p className="error">{errors.userName}</p>
@@ -37,8 +42,11 @@ const NewUserForm = ({ errors, touched, values, status }) => {
               />
               <span className="checkmark" />
             </label>
+ 
+            </div>
+            
+            <div className="formpart1">
 
-<div className="formpart2">
             <Field type="text" name="age" placeholder="Enter Age" className="age" />
             {touched.age && errors.age && <p className="error">{errors.age}</p>}
              
@@ -62,8 +70,10 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 
 
             <button type="submit">Submit!</button>
-
+            
             </div>
+
+            </div>  
 
           </Form>
 
