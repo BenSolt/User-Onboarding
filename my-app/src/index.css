@@ -19,6 +19,9 @@ code {
   font-weight: bold;
   background-color: gray;
   border: 2px solid black;
+
+   display: flex;
+    flex-wrap: wrap;
   
 }
 
@@ -50,7 +53,9 @@ code {
 .note{
   display: block;
   margin-top: 32px;
+
 }
+
 
 
 .error {
@@ -73,5 +78,9 @@ button{
   background: lightblue;
   border: 2px solid black;
   margin-top: 10px;
-  
+
+
+    /* display: flex;
+     flex-wrap: wrap; */
+   
 }

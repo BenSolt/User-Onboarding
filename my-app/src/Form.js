@@ -71,8 +71,10 @@ const NewUserForm = ({ errors, touched, values, status }) => {
       <li>Name: {user.userName}</li>
       <li>Email: {user.email}</li>
       <li>Password: {user.password}</li>
+      
       <li>Age: {user.age}</li>
       <li>Gamer Skill: {user.rank}</li>
+      {/* p tag for notes */}
       <li>Notes: {user.note}</li>
     </ul>
     </div>
