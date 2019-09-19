@@ -38,6 +38,7 @@ const NewUserForm = ({ errors, touched, values, status }) => {
               <span className="checkmark" />
             </label>
 
+<div className="formpart2">
             <Field type="text" name="age" placeholder="Enter Age" className="age" />
             {touched.age && errors.age && <p className="error">{errors.age}</p>}
              
@@ -61,6 +62,9 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 
 
             <button type="submit">Submit!</button>
+
+            </div>
+
           </Form>
 
     

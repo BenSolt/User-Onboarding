@@ -20,8 +20,8 @@ code {
   background-color: gray;
   border: 2px solid black;
 
-   display: flex;
-    flex-wrap: wrap;
+   /* display: flex;
+    flex-wrap: wrap; */
   
 }
 
@@ -80,7 +80,7 @@ button{
   margin-top: 10px;
 
 
-    /* display: flex;
-     flex-wrap: wrap; */
+     display: flex;
+     flex-wrap: wrap; 
    
 }
