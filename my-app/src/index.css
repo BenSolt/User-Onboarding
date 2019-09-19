@@ -15,7 +15,7 @@ code {
 .User-form{
   
   display: flex;
-  flex-wrap: wrap; 
+ flex-wrap: wrap; 
 
   width: 400px;
   margin: auto 200px;
@@ -28,12 +28,10 @@ code {
 
 .formholder{
   display: flex;
-  
-  border: 2px solid black;
+ 
 }
 .formpart1{
-  
-  border: 2px solid black;
+  margin: 0 50px 0 0;
 }
 
 
@@ -90,9 +88,4 @@ button{
   background: lightblue;
   border: 2px solid black;
   margin-top: 10px;
-
-
-     display: flex;
-     flex-wrap: wrap; 
-   
 }

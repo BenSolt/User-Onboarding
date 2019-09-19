@@ -70,7 +70,7 @@ const NewUserForm = ({ errors, touched, values, status }) => {
 
 
             <button type="submit">Submit!</button>
-            
+
             </div>
 
             </div>  
@@ -88,8 +88,8 @@ const NewUserForm = ({ errors, touched, values, status }) => {
       
       <li>Age: {user.age}</li>
       <li>Gamer Skill: {user.rank}</li>
-      {/* p tag for notes */}
-      <li>Notes: {user.note}</li>
+      
+      <p>Notes: {user.note}</p>
     </ul>
     </div>
   ))}
